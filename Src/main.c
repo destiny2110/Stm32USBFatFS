@@ -217,15 +217,21 @@ static void MX_GPIO_Init(void)
 /* USER CODE END Header_StartDefaultTask */
 void StartDefaultTask(void *argument)
 {
-    
-    
-    
+  /* Change to this style (2 space for tab)
+   * Using Window Preference C/C++ Code style and
+   * chose GNU style
+   * Note: edit the text editor make no sense! */
 
   /* USER CODE BEGIN 5 */
   /* Infinite loop */
   for(;;)
   {
-    osDelay(1);
+    /* This behavior mean that in main application,
+     * Yellow led will be blinking every 0.5s
+     * Just it.
+     */
+    HAL_GPIO_TogglePin(GPIOD, GPIO_PIN_12);
+    osDelay(500);
   }
   /* USER CODE END 5 */ 
 }
